@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="has-aside-left has-aside-mobile-transition has-navbar-fixed-top has-aside-expanded">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Plataforma de Gestion de Vuelos</title>
+
+  <!-- Bulma is included -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="app">
+  <nav id="navbar-main" class="navbar is-fixed-top">
+    <div class="navbar-brand">
+      <a class="navbar-item is-hidden-desktop jb-aside-mobile-toggle">
+        <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+      </a>
+    </div>
+    <div class="navbar-brand is-right">
+      <a class="navbar-item is-hidden-desktop jb-navbar-menu-toggle" data-target="navbar-menu">
+        <span class="icon"><i class="mdi mdi-dots-vertical"></i></span>
+      </a>
+    </div>
+    <div class="navbar-menu fadeIn animated faster" id="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown has-dropdown-with-icons has-divider has-user-avatar is-hoverable">
+          <a class="navbar-link is-arrowless">
+            <div class="is-user-avatar">
+              <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe">
+            </div>
+            <div class="is-user-name"><span>Nombre de Usuario</span></div>
+            <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
+          </a>
+          <div class="navbar-dropdown">
+            <a href="perfil.html" class="navbar-item">
+              <span class="icon"><i class="mdi mdi-account"></i></span>
+              <span>Mi perfil</span>
+            </a>
+            <a class="navbar-item">
+              <span class="icon"><i class="mdi mdi-settings"></i></span>
+              <span>Configuracion</span>
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              <span class="icon"><i class="mdi mdi-logout"></i></span>
+              <span>Cerrar Sesion</span>
+            </a>
+          </div>
+        </div>
+        <a title="Log out" class="navbar-item is-desktop-icon-only">
+          <span class="icon"><i class="mdi mdi-logout"></i></span>
+          <span>Cerrar Sesion</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <aside class="aside is-placed-left is-expanded">
+    <div class="aside-tools">
+      <div class="aside-tools-label">
+        <span><b>Plataforma de Gestion de Vuelos</b></span>
+      </div>
+    </div>
+    <div class="menu is-menu-main">
+      <p class="menu-label">Inicio</p>
+      <ul class="menu-list">
+        <li>
+          <a href="dashboard.html" class="is-active router-link-active has-icon">
+            <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
+            <span class="menu-item-label">Dashboard</span>
+          </a>
+        </li>
+      </ul>
+      <p class="menu-label">Vuelos</p>
+      <ul class="menu-list">
+        <li>
+          <a href="vuelos.html" class="has-icon">
+            <span class="icon"><i class="mdi mdi-airplane"></i></span>
+            <span class="menu-item-label">Vuelos</span>
+          </a>
+        </li>
+        <li>
+          <a href="crearvuelo.html" class="has-icon">
+            <span class="icon"><i class="mdi mdi-plus"></i></span>
+            <span class="menu-item-label">Crear Vuelo</span>
+          </a>
+        </li>
+      </ul>
+      <p class="menu-label">Perfil</p>
+      <ul class="menu-list">
+        <li>
+          <a href="perfil.html" class="has-icon">
+            <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+            <span class="menu-item-label">Perfil</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <section class="section is-title-bar">
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <ul>
+            <li>Admin</li>
+            <li>Dashboard</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero is-hero-bar">
+    <div class="hero-body">
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item"><h1 class="title">
+            Panel de Control
+          </h1></div>
+        </div>
+        <div class="level-right" style="display: none;">
+          <div class="level-item"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section is-main-section">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <div class="card tile is-child">
+          <div class="card-content">
+            <div class="level is-mobile">
+              <div class="level-item">
+                <div class="is-widget-label"><h3 class="subtitle is-spaced">
+                  Vuelos
+                </h3>
+                  <h1 class="title">
+                    18
+                  </h1>
+                </div>
+              </div>
+              <div class="level-item has-widget-icon">
+                <div class="is-widget-icon"><span class="icon has-text-primary is-large"><i
+                    class="mdi mdi-airplane mdi-48px"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <div class="card tile is-child">
+          <div class="card-content">
+            <div class="level is-mobile">
+              <div class="level-item">
+                <div class="is-widget-label"><h3 class="subtitle is-spaced">
+                  Usuarios Registrados
+                </h3>
+                  <h1 class="title">
+                    180
+                  </h1>
+                </div>
+              </div>
+              <div class="level-item has-widget-icon">
+                <div class="is-widget-icon"><span class="icon has-text-info is-large"><i
+                    class="mdi mdi-account-multiple mdi-48px"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <div class="card tile is-child">
+          <div class="card-content">
+            <div class="level is-mobile">
+              <div class="level-item">
+                <div class="is-widget-label"><h3 class="subtitle is-spaced">
+                  Vuelos Retrasados
+                </h3>
+                  <h1 class="title">
+                    2
+                  </h1>
+                </div>
+              </div>
+              <div class="level-item has-widget-icon">
+                <div class="is-widget-icon"><span class="icon has-text-success is-large"><i
+                    class="mdi mdi-alert-circle mdi-48px"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card has-table has-mobile-sort-spaced">
+      <header class="card-header">
+        <p class="card-header-title">
+          <span class="icon"><i class="mdi mdi-airplane"></i></span>
+          Vuelos
+        </p>
+        <a href="#" class="card-header-icon">
+          <span class="icon"><i class="mdi mdi-reload"></i></span>
+        </a>
+      </header>
+      <div class="card-content">
+        <div class="b-table has-pagination">
+          <div class="table-wrapper has-mobile-cards">
+            <table class="table is-fullwidth is-striped is-hoverable is-sortable is-fullwidth">
+              <thead>
+              <tr>
+                <th>Codigo de Vuelo</th>
+                <th>Avion</th>
+                <th>Piloto</th>
+                <th>Capacidad</th>
+                <th>Estado</th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td data-label="CodigoDeVuelo">A5824C5</td>
+                <td data-label="Avion">Airbus 319</td>
+                <td data-label="Piloto">George Garcia</td>
+                <td data-label="Capacidad" class="is-progress-cell">190/210</td>
+                <td data-label="Estado">
+                  <small class="is-abbr-like" title="Oct 25, 2020">En camino</small>
+                </td>
+                <td class="is-actions-cell">
+                  <div class="buttons is-right">
+                    <button class="button is-small is-primary" type="button">
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button class="button is-small is-danger jb-modal" data-target="sample-modal" type="button">
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="CodigoDeVuelo">A8724S2</td>
+                <td data-label="Avion">Boeing 737</td>
+                <td data-label="Piloto">South Cory</td>
+                <td data-label="Capacidad" class="is-progress-cell">280/280</td>
+                <td data-label="Estado">
+                  <small class="is-abbr-like" title="Oct 25, 2020">En camino</small>
+                </td>
+                <td class="is-actions-cell">
+                  <div class="buttons is-right">
+                    <button class="button is-small is-primary" type="button">
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button class="button is-small is-danger jb-modal" data-target="sample-modal" type="button">
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="CodigoDeVuelo">A5632Q2</td>
+                <td data-label="Avion">Boeing 777</td>
+                <td data-label="Piloto">Juan Carlos Lopez</td>
+                <td data-label="Capacidad" class="is-progress-cell">250/290</td>
+                <td data-label="Estado">
+                  <small class="has-text-grey is-abbr-like" title="Oct 25, 2020">Retrasado</small>
+                </td>
+                <td class="is-actions-cell">
+                  <div class="buttons is-right">
+                    <button class="button is-small is-primary" type="button">
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button class="button is-small is-danger jb-modal" data-target="sample-modal" type="button">
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="CodigoDeVuelo">A8854D3</td>
+                <td data-label="Avion">A330-900NEO</td>
+                <td data-label="Piloto">Jhon Douglas</td>
+                <td data-label="Capacidad" class="is-progress-cell">420/425</td>
+                <td data-label="Estado">
+                  <small class="is-abbr-like" title="Oct 25, 2020">En camino</small>
+                </td>
+                <td class="is-actions-cell">
+                  <div class="buttons is-right">
+                    <button class="button is-small is-primary" type="button">
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button class="button is-small is-danger jb-modal" data-target="sample-modal" type="button">
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="CodigoDeVuelo">A5632K2</td>
+                <td data-label="Avion">Airbus A320</td>
+                <td data-label="Piloto">Luis Jorge Roman</td>
+                <td data-label="Capacidad" class="is-progress-cell">290/310</td>
+                <td data-label="Estado">
+                  <small class="has-text-grey is-abbr-like" title="Oct 25, 2020">Retrasado</small>
+                </td>
+                <td class="is-actions-cell">
+                  <div class="buttons is-right">
+                    <button class="button is-small is-primary" type="button">
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button class="button is-small is-danger jb-modal" data-target="sample-modal" type="button">
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+             
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="notification">
+            <div class="level">
+              <div class="level-left">
+                <div class="level-item">
+                  <div class="buttons has-addons">
+                    <button type="button" class="button is-active">1</button>
+                    <button type="button" class="button">2</button>
+                    <button type="button" class="button">3</button>
+                  </div>
+                </div>
+              </div>
+              <div class="level-right">
+                <div class="level-item">
+                  <small>Page 1 of 3</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item">
+            © 2022, Grupo 9 - NRC 2100
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div id="sample-modal" class="modal">
+  <div class="modal-background jb-modal-close"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Confirmar accion</p>
+      <button class="delete jb-modal-close" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <p>Esto borrara el registro permanentemente</p>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button jb-modal-close">Cancelar</button>
+      <button class="button is-danger jb-modal-close">Borrar</button>
+    </footer>
+  </div>
+  <button class="modal-close is-large jb-modal-close" aria-label="close"></button>
+</div>
+
+<!-- Scripts below are for demo only -->
+<script type="text/javascript" src="js/main.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script type="text/javascript" src="js/chart.sample.min.js"></script>
+
+<!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
+</body>
+</html>
